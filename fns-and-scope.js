@@ -79,11 +79,16 @@ alert('Welcome, ' + newMyName);
 
 //////////////////PROBLEM 7////////////////////
 //Create a function called outerFn which returns an anonymous function which returns your name.
-
+function outerFn() {
+  return function() {
+    return getName();
+  };
+}
   //Code Here
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
   //Code Here
 
 //Now invoke innerFn.
+innerFn();
